@@ -54,6 +54,14 @@ export default function Footer() {
                   ]}
                />
 
+               <FooterNavigation
+                  category="Legal"
+                  items={[
+                     { href: "/terms", children: "Terms" },
+                     { href: "/privacy", children: "Privacy" },
+                  ]}
+               />
+
                <iframe
                   src="https://gitlogs.instatus.com/embed-status/dark-lg"
                   width="245"
