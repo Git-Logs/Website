@@ -15,10 +15,26 @@ module.exports = {
   async redirects() {
     return [
       {
-        source: '/invite',
-        destination: 'https://discord.com/api/oauth2/authorize?client_id=910319339712950282&permissions=466108153169&scope=bot%20applications.commands',
-        permanent: true,
-      }
+            source: "/invite",
+            destination:
+               "https://discord.com/api/oauth2/authorize?client_id=913266703398473810&permissions=545125694705&scope=bot%20applications.commands",
+            permanent: true,
+         },
+         {
+            source: "/status",
+            destination: "https://gitlogs.instatus.com/",
+            permanent: true,
+         },
+         {
+            source: "/github",
+            destination: "https://github.com/Git-Logs",
+            permanent: true,
+         },
+         {
+            source: "/twitter",
+            destination: "https://twitter.com/GithubLogs",
+            permanent: true,
+         }
     ]
   },
 

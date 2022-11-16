@@ -33,7 +33,7 @@ const Header: React.FC<Props> = () => {
             <div tw="flex h-full flex-1 items-center">
                <UnstyledLink href="/" tw="text-xl font-semibold">
                   <img src="/images/logo.png" className="inline-flex h-10 w-10" />
-                  Artie AI
+                  Git Logs
                </UnstyledLink>
 
                <nav tw="ml-8 hidden space-x-4 lg:flex lg:items-center text-lg">
