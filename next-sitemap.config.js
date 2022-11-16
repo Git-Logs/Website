@@ -3,7 +3,7 @@
  * @see https://github.com/iamvishnusankar/next-sitemap#readme
  */
 module.exports = {
-   siteUrl: "https://artie.infinitydev.team/",
+   siteUrl: "https://www.gitlogs.xyz",
    generateRobotsTxt: true,
    robotsTxtOptions: {
       policies: [{ userAgent: "*", allow: "/" }],
