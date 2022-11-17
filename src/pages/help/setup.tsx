@@ -73,6 +73,15 @@ const Docs: NextPageWithLayout = () => {
                bottom of the setup page!
             </p>
          </div>
+         <div
+            key="Section"
+            tw="p-8 bg-tw-background-secondary w-full h-56 rounded-lg border border-tw-border"
+         >
+            <h2>Step 7</h2>
+            <p>
+               Save your webhook (with or without a secret) and enjoy!
+            </p>
+         </div>
       </section>
    );
 };
