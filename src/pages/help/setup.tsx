@@ -40,7 +40,7 @@ const Docs: NextPageWithLayout = () => {
             <h2>Step 3</h2>
             <p>
                Create a new Webhook with the following payload url:{" "}
-               <code>https://api.gitlogs.xyz</code>
+               <code>https://github.diswidgets.org</code>
             </p>
          </div>
          <div
