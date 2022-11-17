@@ -1,3 +1,3 @@
-# Artie Bot Dash!
+# Artie Bot Dash
 
 Artie AI Dashboard
