@@ -1,3 +1,3 @@
-# Artie Bot Dash
+# Git Logs Dash
 
-Artie AI Dashboard
+Bruhhhh
