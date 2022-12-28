@@ -1,3 +1,3 @@
-# Git Logs Dash
+# Git Logs
 
 Bruhhhh
