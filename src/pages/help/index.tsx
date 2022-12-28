@@ -23,7 +23,7 @@ const HelpCenter: NextPageWithLayout = () => {
                   href="/help/setup"
                   tw="flex items-center justify-center p-4 hover:bg-tw-background-secondary sm:py-8 lg:py-12 transition ease-out"
                >
-                  Setup Guide
+                  Setup Guide <span tw="bg-primary-600 rounded-lg ml-4">Outdated!</span>
                </UnstyledLink>
                <UnstyledLink
                   rel="noopener noreferrer"
