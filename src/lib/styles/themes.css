@@ -1,0 +1,45 @@
+[data-theme*="indigo"] {
+   --tw-color-primary-50: 238, 242, 255;
+   --tw-color-primary-100: 224, 231, 255;
+   --tw-color-primary-200: 141, 215, 0;
+   --tw-color-primary-300: 20, 236, 180;
+   --tw-color-primary-400: 2, 186, 168;
+   --tw-color-primary-500: 2, 175, 158;
+   --tw-color-primary-600: 2, 158, 143;
+   --tw-color-primary-700: 0, 112, 100;
+   --tw-color-primary-800: 40, 231, 247;
+   --tw-color-primary-900: 18, 51, 83;
+   --color-primary-50: rgb(var(--tw-color-primary-50)); /* #eef2ff */
+   --color-primary-100: rgb(var(--tw-color-primary-100)); /* #e0e7ff */
+   --color-primary-200: rgb(var(--tw-color-primary-200)); /* #28e7f7 */
+   --color-primary-300: rgb(var(--tw-color-primary-300)); /* #8dd700 */
+   --color-primary-400: rgb(var(--tw-color-primary-400)); /* #14ecb4 */
+   --color-primary-500: rgb(var(--tw-color-primary-500)); /* #02baa8 */
+   --color-primary-600: rgb(var(--tw-color-primary-600)); /* #02af9e */
+   --color-primary-700: rgb(var(--tw-color-primary-700)); /* #029e8f */
+   --color-primary-800: rgb(var(--tw-color-primary-800)); /* #007064 */
+   --color-primary-900: rgb(var(--tw-color-primary-900)); /* #123353 */
+}
+
+[data-theme*="gray"] {
+   --tw-color-primary-50: 249, 250, 251;
+   --tw-color-primary-100: 243, 244, 246;
+   --tw-color-primary-200: 229, 231, 235;
+   --tw-color-primary-300: 209, 213, 219;
+   --tw-color-primary-400: 156, 163, 175;
+   --tw-color-primary-500: 107, 114, 128;
+   --tw-color-primary-600: 75, 85, 99;
+   --tw-color-primary-700: 55, 65, 81;
+   --tw-color-primary-800: 31, 41, 55;
+   --tw-color-primary-900: 17, 24, 39;
+   --color-primary-50: rgb(var(--tw-color-primary-50)); /* #f9fafb */
+   --color-primary-100: rgb(var(--tw-color-primary-100)); /* #f3f4f6 */
+   --color-primary-200: rgb(var(--tw-color-primary-200)); /* #e5e7eb */
+   --color-primary-300: rgb(var(--tw-color-primary-300)); /* #d1d5db */
+   --color-primary-400: rgb(var(--tw-color-primary-400)); /* #9ca3af */
+   --color-primary-500: rgb(var(--tw-color-primary-500)); /* #6b7280 */
+   --color-primary-600: rgb(var(--tw-color-primary-600)); /* #4b5563 */
+   --color-primary-700: rgb(var(--tw-color-primary-700)); /* #374151 */
+   --color-primary-800: rgb(var(--tw-color-primary-800)); /* #1f2937 */
+   --color-primary-900: rgb(var(--tw-color-primary-900)); /* #111827 */
+}
