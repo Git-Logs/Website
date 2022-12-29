@@ -17,9 +17,7 @@
 /build
 
 # Random Stuff
-/.yarn
 /.vscode
-/.yarn/
 /.vscode/
 .env
 
