@@ -17,10 +17,13 @@ const Docs: NextPageWithLayout = () => {
          >
             <h2>Step 1</h2>
             <p>
-               Invite the bot to your Discord Server by{" "}
+               <strong>make sure you are allowing DM's</strong> and invite the bot to your
+               Discord Server by{" "}
                <ArrowLink href="https://discord.com/api/oauth2/authorize?client_id=910319339712950282&permissions=466108153169&scope=bot%20applications.commands">
                   Clicking Here
                </ArrowLink>
+               once invited run the <code className="text-primary-500">git!newhook</code>{" "}
+               or <code className="text-primary-500">/newhook</code> command
             </p>
          </div>
          <div
@@ -29,8 +32,8 @@ const Docs: NextPageWithLayout = () => {
          >
             <h2>Step 2</h2>
             <p>
-               Head to the "Settings" tab in your Github Repo and find the "Webhooks
-               Section"
+               Check the DM from the Bot for your Webhook Link, ID and Secret. Head over
+               to the Settings {">"} Webhook Tab of your Github Organization or Repository
             </p>
          </div>
          <div
@@ -39,8 +42,12 @@ const Docs: NextPageWithLayout = () => {
          >
             <h2>Step 3</h2>
             <p>
-               Create a new Webhook with the following payload url:{" "}
-               <code>https://github.diswidgets.org</code> (recommended if using a secret) or <code>https://api.gitlogs.xyz</code>
+               Under the <code className="text-primary-500">"Payload URL"</code> section
+               enter the
+               <code className="break-all text-primary-500">
+                  "https://v2.gitlogs.xyz/kittycat"
+               </code>{" "}
+               Webhook URL provided by the bot including the "id" query.
             </p>
          </div>
          <div
@@ -50,7 +57,7 @@ const Docs: NextPageWithLayout = () => {
             <h2>Step 4</h2>
             <p>
                Set the Webhooks "Content Type" to <code>application/json</code> and leave
-               SSL Verification enabled.
+               SSL Verification enabled for security purposes.
             </p>
          </div>
          <div
@@ -59,8 +66,9 @@ const Docs: NextPageWithLayout = () => {
          >
             <h2>Step 5</h2>
             <p>
-               Allow the Webhook to send you all events by selecting "Send me everything"
-               or select what you want to send with "Let me select individual events"
+               Under the <code className="text-primary-500">"Secret"</code> section
+               provide the Webhook Secret that can be found in the bots DM. (DO NOT USE
+               THE ID)
             </p>
          </div>
          <div
@@ -68,10 +76,7 @@ const Docs: NextPageWithLayout = () => {
             tw="p-8 bg-tw-background-secondary w-full h-56 rounded-lg border border-tw-border"
          >
             <h2>Step 6</h2>
-            <p>
-               Make sure the Webhook is active by checking the "Active" option at the
-               bottom of the setup page!
-            </p>
+            <p>Save your webhook settings and proceed to the next step.</p>
          </div>
          <div
             key="Section"
@@ -79,7 +84,9 @@ const Docs: NextPageWithLayout = () => {
          >
             <h2>Step 7</h2>
             <p>
-               Save your webhook (with or without a secret) and enjoy!
+               Run the command <code className="text-primary-500">/newrepo</code> and
+               follow the slash command prompts. (<strong>NOTE:</strong> Owner is the
+               Owner or Org Name (ex: Git-Logs), Name: is the repo name)
             </p>
          </div>
       </section>

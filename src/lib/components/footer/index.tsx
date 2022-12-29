@@ -37,12 +37,20 @@ export default function Footer() {
 
             <hr tw="border-tw-border my-12" />
 
-            <div tw="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            <div tw="grid grid-cols-2 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+               <FooterNavigation
+                  category="Support"
+                  items={[
+                     { href: "", children: "Discord" },
+                     { href: "https://gitlogs.instatus.com", children: "Status" },
+                  ]}
+               />
+
                <FooterNavigation
                   category="Information"
                   items={[
                      { href: "/commands", children: "Commands" },
-                     { href: "https://gitlogs.instatus.com", children: "Status" },
+                     { href: "/help", children: "Usage Guides" },
                   ]}
                />
 
@@ -61,17 +69,11 @@ export default function Footer() {
                      { href: "/privacy", children: "Privacy" },
                   ]}
                />
-
-               <iframe
-                  src="https://gitlogs.instatus.com/embed-status/dark-lg"
-                  width="245"
-                  height="61"
-                  frameBorder="0"
-                  scrolling="no"
-               ></iframe>
             </div>
 
-            <small tw="block mt-12">&copy; {new Date().getFullYear()} Git Logs</small>
+            <small tw="block mt-12">
+               &copy; {new Date().getFullYear()} Git Logs | All Rights Reserved
+            </small>
          </Container>
       </footer>
    );

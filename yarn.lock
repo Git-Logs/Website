@@ -2147,6 +2147,57 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@git-logs/web@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@git-logs/web@workspace:."
+  dependencies:
+    "@commitlint/cli": ^16.3.0
+    "@commitlint/config-conventional": ^16.2.4
+    "@iconify-icon/react": 1.0.2
+    "@svgr/webpack": ^6.2.1
+    "@tailwindcss/forms": ^0.5.2
+    "@testing-library/jest-dom": ^5.16.4
+    "@testing-library/react": ^13.3.0
+    "@types/nprogress": ^0.2.0
+    "@types/react": ^18.0.14
+    "@types/styled-components": ^5.1.25
+    "@typescript-eslint/eslint-plugin": ^5.29.0
+    "@typescript-eslint/parser": ^5.29.0
+    autoprefixer: ^10.4.7
+    babel-plugin-macros: ^3.1.0
+    clsx: ^1.1.1
+    eslint: ^8.18.0
+    eslint-config-next: ^12.1.6
+    eslint-config-prettier: ^8.5.0
+    eslint-plugin-simple-import-sort: ^7.0.0
+    eslint-plugin-unused-imports: ^2.0.0
+    husky: ^7.0.4
+    jest: ^27.5.1
+    lint-staged: ^12.5.0
+    next: ^12.1.6
+    next-auth: ^4.10.2
+    next-sitemap: ^2.5.28
+    next-themes: ^0.2.0
+    nprogress: ^0.2.0
+    postcss: ^8.4.14
+    prettier: ^2.7.1
+    prettier-plugin-tailwindcss: ^0.1.11
+    react: ^18.2.0
+    react-dom: ^18.2.0
+    react-icons: ^4.4.0
+    react-query: ^3.39.1
+    react-tooltip: ^4.2.21
+    react-transition-group: ^4.4.2
+    react-transitions-library: ^1.10.2
+    release-please: ^13.19.3
+    styled-components: ^5.3.5
+    tailwind-merge: ^1.3.0
+    tailwindcss: ^3.1.6
+    twin.macro: ^2.8.2
+    typescript: ^4.7.4
+  languageName: unknown
+  linkType: soft
+
 "@humanwhocodes/config-array@npm:^0.9.2":
   version: 0.9.5
   resolution: "@humanwhocodes/config-array@npm:0.9.5"
@@ -2169,6 +2220,24 @@ __metadata:
   version: 2.2.5
   resolution: "@iarna/toml@npm:2.2.5"
   checksum: b63b2b2c4fd67969a6291543ada0303d45593801ee744b60f5390f183c03d9192bc67a217abb24be945158f1935f02840d9ffff40c0142aa171b5d3b6b6a3ea5
+  languageName: node
+  linkType: hard
+
+"@iconify-icon/react@npm:1.0.2":
+  version: 1.0.2
+  resolution: "@iconify-icon/react@npm:1.0.2"
+  dependencies:
+    iconify-icon: ^1.0.2
+  peerDependencies:
+    react: ">=16"
+  checksum: d4e8b9f40223e96c952b466577fe650b8067fc33e068019bac256059d90d34026fe1bde0d1b3959c12131c835b9bf7f71ff6d24e62c400740f6c56d527a16f89
+  languageName: node
+  linkType: hard
+
+"@iconify/types@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "@iconify/types@npm:2.0.0"
+  checksum: 029f58542c160e9d4a746869cf2e475b603424d3adf3994c5cc8d0406c47e6e04a3b898b2707840c1c5b9bd5563a1660a34b110d89fce43923baca5222f4e597
   languageName: node
   linkType: hard
 
@@ -6435,56 +6504,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"git-logs-web@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "git-logs-web@workspace:."
-  dependencies:
-    "@commitlint/cli": ^16.3.0
-    "@commitlint/config-conventional": ^16.2.4
-    "@svgr/webpack": ^6.2.1
-    "@tailwindcss/forms": ^0.5.2
-    "@testing-library/jest-dom": ^5.16.4
-    "@testing-library/react": ^13.3.0
-    "@types/nprogress": ^0.2.0
-    "@types/react": ^18.0.14
-    "@types/styled-components": ^5.1.25
-    "@typescript-eslint/eslint-plugin": ^5.29.0
-    "@typescript-eslint/parser": ^5.29.0
-    autoprefixer: ^10.4.7
-    babel-plugin-macros: ^3.1.0
-    clsx: ^1.1.1
-    eslint: ^8.18.0
-    eslint-config-next: ^12.1.6
-    eslint-config-prettier: ^8.5.0
-    eslint-plugin-simple-import-sort: ^7.0.0
-    eslint-plugin-unused-imports: ^2.0.0
-    husky: ^7.0.4
-    jest: ^27.5.1
-    lint-staged: ^12.5.0
-    next: ^12.1.6
-    next-auth: ^4.10.2
-    next-sitemap: ^2.5.28
-    next-themes: ^0.2.0
-    nprogress: ^0.2.0
-    postcss: ^8.4.14
-    prettier: ^2.7.1
-    prettier-plugin-tailwindcss: ^0.1.11
-    react: ^18.2.0
-    react-dom: ^18.2.0
-    react-icons: ^4.4.0
-    react-query: ^3.39.1
-    react-tooltip: ^4.2.21
-    react-transition-group: ^4.4.2
-    react-transitions-library: ^1.10.2
-    release-please: ^13.19.3
-    styled-components: ^5.3.5
-    tailwind-merge: ^1.3.0
-    tailwindcss: ^3.1.6
-    twin.macro: ^2.8.2
-    typescript: ^4.7.4
-  languageName: unknown
-  linkType: soft
-
 "git-raw-commits@npm:^2.0.0":
   version: 2.0.10
   resolution: "git-raw-commits@npm:2.0.10"
@@ -6864,6 +6883,15 @@ __metadata:
   bin:
     husky: lib/bin.js
   checksum: c6ec4af63da2c9522da8674a20ad9b48362cc92704896cc8a58c6a2a39d797feb2b806f93fbd83a6d653fbdceb2c3b6e0b602c6b2e8565206ffc2882ef7db9e9
+  languageName: node
+  linkType: hard
+
+"iconify-icon@npm:^1.0.2":
+  version: 1.0.2
+  resolution: "iconify-icon@npm:1.0.2"
+  dependencies:
+    "@iconify/types": ^2.0.0
+  checksum: e8d3bb2f283845ba01cf52d97d0fadef93be1405ed0a2f87166d9c057477ed21001f21c29b3cf701ffbe1dc6bb51961390cbe0f0d778793773d34e5f79e473f2
   languageName: node
   linkType: hard
 

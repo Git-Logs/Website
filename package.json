@@ -1,6 +1,6 @@
 {
-   "name": "git-logs-web",
-   "version": "1.0.1",
+   "name": "@git-logs/web",
+   "version": "0.0.1",
    "scripts": {
       "dev": "next dev",
       "build": "next build",
@@ -15,7 +15,7 @@
       "format:check": "prettier -c .",
       "release": "release-please",
       "push-release": "git push --follow-tags origin v1",
-      "postbuild": "next-sitemap --config next-sitemap.config.js",
+      "postbuild": "next-sitemap --config ./configs/sitemap.js",
       "postinstall": "husky install"
    },
    "dependencies": {
@@ -37,6 +37,7 @@
    "devDependencies": {
       "@commitlint/cli": "^16.3.0",
       "@commitlint/config-conventional": "^16.2.4",
+      "@iconify-icon/react": "1.0.2",
       "@svgr/webpack": "^6.2.1",
       "@tailwindcss/forms": "^0.5.2",
       "@testing-library/jest-dom": "^5.16.4",

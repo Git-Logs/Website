@@ -40,7 +40,7 @@ const Header: React.FC<Props> = () => {
                   <PrimaryLink href="/">Home</PrimaryLink>
                   <PrimaryLink href="/commands">Commands</PrimaryLink>
                   <PrimaryLink href="https://gitlogs.instatus.com">Status</PrimaryLink>
-                  <PrimaryLink href="/help">Docs</PrimaryLink>
+                  <PrimaryLink href="/help/setup">Setup</PrimaryLink>
                </nav>
             </div>
             <div tw="flex h-full items-center space-x-4">

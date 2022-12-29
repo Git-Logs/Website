@@ -1,9 +1,13 @@
 import * as React from "react";
+import { useRouter } from "next/router";
+import { useState } from "react";
 import "twin.macro";
 
 import ArrowLink from "#components/links/ArrowLink";
 import PrimaryLink from "#components/links/PrimaryLink";
 import { Container } from "#components/StyledComponents";
+
+import { Icon } from "@iconify-icon/react";
 
 type Props = {
    title: string;
@@ -11,12 +15,26 @@ type Props = {
 };
 
 const StickyHeader: React.FC<Props> = ({ title, titleOpacity }) => {
+   const [clicked, setClicked] = useState(false);
+   const router = useRouter();
+
    return (
       <header className="sticky top-0 z-10 bg-black bg-opacity-40 backdrop-blur-lg backdrop-filter">
          <Container tw="relative flex h-14 items-center px-2">
             <div tw="z-10">
                <ArrowLink as={PrimaryLink} href="/" direction="left">
-                  Back to home
+                  Go Home
+               </ArrowLink>
+               <ArrowLink
+                  as={PrimaryLink}
+                  href=""
+                  direction="left"
+                  onClick={() => {
+                     setClicked(true);
+                     router.back();
+                  }}
+               >
+                  Go Back
                </ArrowLink>
             </div>
             <h4

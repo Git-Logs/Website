@@ -17,13 +17,23 @@ const HelpCenter: NextPageWithLayout = () => {
             tw="my-8 w-full lg:w-1/2 rounded-lg border-transparent bg-tw-background-secondary font-semibold text-tw-primary-light focus:border-2 focus:border-primary-500 focus:ring-0"
          />*/}
          <div tw="flex w-full flex-col divide-y divide-tw-border sm:flex-row sm:divide-y-0 sm:divide-x sm:px-8 lg:px-12 xl:px-32">
+            {/**------------------------------------------- SECTION 1 ------------------------------------------- */}
+
             <div tw="flex w-full flex-col divide-y divide-tw-border">
                <UnstyledLink
                   rel="noopener noreferrer"
                   href="/help/setup"
                   tw="flex items-center justify-center p-4 hover:bg-tw-background-secondary sm:py-8 lg:py-12 transition ease-out"
                >
-                  Setup Guide <span tw="bg-primary-600 rounded-lg ml-4">Outdated!</span>
+                  Setup Guide
+               </UnstyledLink>
+               <UnstyledLink
+                  rel="noopener noreferrer"
+                  href="#"
+                  tw="flex items-center justify-center p-4 hover:bg-tw-background-secondary sm:py-8 lg:py-12 transition ease-out"
+               >
+                  Self Hosting
+                  <span tw="bg-primary-600 rounded-lg ml-4">Soon!</span>
                </UnstyledLink>
                <UnstyledLink
                   rel="noopener noreferrer"
@@ -35,13 +45,15 @@ const HelpCenter: NextPageWithLayout = () => {
                </UnstyledLink>
                <UnstyledLink
                   rel="noopener noreferrer"
-                  href="#"
+                  href="/commands"
                   tw="flex items-center justify-center p-4 hover:bg-tw-background-secondary sm:py-8 lg:py-12 transition ease-out"
                >
-                  Information
-                  <span tw="bg-primary-600 rounded-lg ml-4">Soon!</span>
+                  Command Usage
                </UnstyledLink>
             </div>
+
+            {/**------------------------------------------- SECTION 2 ------------------------------------------- */}
+
             <div tw="flex w-full flex-col divide-y divide-tw-border">
                <UnstyledLink
                   rel="noopener noreferrer"
@@ -67,24 +79,19 @@ const HelpCenter: NextPageWithLayout = () => {
                   User Reports
                   <span tw="bg-primary-600 rounded-lg ml-4">Soon!</span>
                </UnstyledLink>
+               <UnstyledLink
+                  rel="noopener noreferrer"
+                  href="#"
+                  tw="flex items-center justify-center p-4 hover:bg-tw-background-secondary sm:py-8 lg:py-12 transition ease-out"
+               >
+                  Staff Reports
+                  <span tw="bg-primary-600 rounded-lg ml-4">Soon!</span>
+               </UnstyledLink>
             </div>
+
+            {/**------------------------------------------- SECTION 3 ------------------------------------------- */}
+
             <div tw="hidden w-full divide-y divide-tw-border sm:flex sm:flex-col">
-               <UnstyledLink
-                  rel="noopener noreferrer"
-                  href="#"
-                  tw="flex items-center justify-center p-4 hover:bg-tw-background-secondary sm:py-8 lg:py-12 transition ease-out"
-               >
-                  Security Vulnerabilities
-                  <span tw="bg-primary-600 rounded-lg ml-4">Soon!</span>
-               </UnstyledLink>
-               <UnstyledLink
-                  rel="noopener noreferrer"
-                  href="#"
-                  tw="flex items-center justify-center p-4 hover:bg-tw-background-secondary sm:py-8 lg:py-12 transition ease-out"
-               >
-                  Privacy
-                  <span tw="bg-primary-600 rounded-lg ml-4">Soon!</span>
-               </UnstyledLink>
                <UnstyledLink
                   rel="noopener noreferrer"
                   href="#"
@@ -92,6 +99,28 @@ const HelpCenter: NextPageWithLayout = () => {
                >
                   Developers
                   <span tw="bg-primary-600 rounded-lg ml-4">Soon!</span>
+               </UnstyledLink>
+               <UnstyledLink
+                  rel="noopener noreferrer"
+                  href="#"
+                  tw="flex items-center justify-center p-4 hover:bg-tw-background-secondary sm:py-8 lg:py-12 transition ease-out"
+               >
+                  Vulnerabilities
+                  <span tw="bg-primary-600 rounded-lg ml-4">Soon!</span>
+               </UnstyledLink>
+               <UnstyledLink
+                  rel="noopener noreferrer"
+                  href="/privacy"
+                  tw="flex items-center justify-center p-4 hover:bg-tw-background-secondary sm:py-8 lg:py-12 transition ease-out"
+               >
+                  Privacy
+               </UnstyledLink>
+               <UnstyledLink
+                  rel="noopener noreferrer"
+                  href="/terms"
+                  tw="flex items-center justify-center p-4 hover:bg-tw-background-secondary sm:py-8 lg:py-12 transition ease-out"
+               >
+                  Terms
                </UnstyledLink>
             </div>
          </div>
