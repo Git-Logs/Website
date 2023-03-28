@@ -48,25 +48,25 @@ const Footer = () => {
                         <div>
                             <div className="flex text-sm font-medium text-slate-400 mt-4">
                                 {data?.page?.status === "UP" ? (
-                                    <a href="https://status.jobcord.co" target="_blank" rel="noopener noreferrer">
+                                    <a href="https://gitlogs.instatus.com/" target="_blank" rel="noopener noreferrer">
                                         <span className="text-[#4ade80]">
                                             <i className="fas fa-circle text-[#4ade80]" /> ONLINE!
                                         </span>
                                     </a>
                                 ) : data?.page?.status === "UNDERMAINTENANCE" ? (
-                                    <a href="https://status.jobcord.co" target="_blank" rel="noopener noreferrer">
+                                    <a href="https://gitlogs.instatus.com/" target="_blank" rel="noopener noreferrer">
                                         <span className="text-yellow-300">
                                             <i className="fas fa-circle text-yellow-300" /> MAINTENANCE.
                                         </span>
                                     </a>
                                 ) : data?.page?.status === "HASISSUES" ? (
-                                    <a href="https://status.jobcord.co" target="_blank" rel="noopener noreferrer">
+                                    <a href="https://gitlogs.instatus.com/" target="_blank" rel="noopener noreferrer">
                                         <span className="text-[#f87171]">
                                             <i className="fas fa-circle text-[#f87171]" /> DEGRADED.
                                         </span>
                                     </a>
                                 ) : (
-                                    <a href="https://status.jobcord.co" target="_blank" rel="noopener noreferrer">
+                                    <a href="https://gitlogs.instatus.com/" target="_blank" rel="noopener noreferrer">
                                         <span className="text-white">
                                             <i className="fas fa-circle text-white" /> OFFLINE.
                                         </span>
