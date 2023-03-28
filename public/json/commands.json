@@ -1,0 +1,44 @@
+{
+    "commands": [
+        {
+            "name": "help",
+            "description": "View a list of commands and information",
+            "botUserPermissions": null,
+            "userDiscordPermissions": null,
+            "dm": false,
+            "examples": [
+                {
+                    "title": "Prefix Based",
+                    "usage": "git!help"
+                },
+                {
+                    "title": "Slash Based",
+                    "usage": "/help"
+                }
+            ],
+            "group": "Info"
+        },
+        {
+            "name": "simplehelp",
+            "description": "View a better list of commands and information",
+            "botUserPermissions": null,
+            "userDiscordPermissions": null,
+            "dm": false,
+            "examples": [
+                {
+                    "title": "Prefix Based",
+                    "usage": "git!simplehelp"
+                },
+                {
+                    "title": "Slash Based",
+                    "usage": "/simplehelp"
+                },
+                {
+                    "title": "Command Help",
+                    "usage": "git!simplehelp backup | /simplehelp backup"
+                }
+            ],
+            "group": "Info"
+        }
+    ]
+}
