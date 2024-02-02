@@ -18,7 +18,7 @@ export default function Login() {
 
 export const getServerSideProps: GetServerSideProps = async(ctx) => {
 
-    const url = "https://discord.gg/sdf5bfJbVf";
+    const url = "https://discord.gg/z257PJFPXD";
 
     return {
         redirect: {
