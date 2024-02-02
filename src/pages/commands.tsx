@@ -90,7 +90,7 @@ export default class Home extends React.Component {
                                 <br /><br />
                                 - The <kbd className={styles['code-style-inline-purple']}>Purple</kbd> Command Tags require the bot to have the Commands Respective Permissions
                                 <br /><br />
-                                - The <kbd className={styles['code-style-inline-blue']}>Bot Admin</kbd> Command Tags can only be executed by the Migizi Owner/Developers.
+                                - The <kbd className={styles['code-style-inline-blue']}>Bot Admin</kbd> Command Tags can only be executed by the Github Logs Owner/Developers.
                                 <br /><br />
                                 - The <kbd className={styles['code-style-inline-green']}>Everyone</kbd> Command Tags can be executed by Any member of the Server.
                             </p>
