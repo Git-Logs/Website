@@ -19,7 +19,7 @@ const Navbar = () => {
           id="logo"
           className="lg:text-xl p-2 mr-4 inline-flex items-center font-montserrat"
         >
-          <img src="/images/logo.webp" className={styles["logo"]} alt="" />
+          <img src="/images/IMG_8572.png" className={styles["logo"]} alt="" />
           <Link href="/">
             <a className={styles["title"] + "text-toxColor text-3xl"}>&nbsp;Github Logs</a>
           </Link>
