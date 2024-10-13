@@ -44,7 +44,7 @@ const Footer = () => {
                     </ul>
                     <div className={styles['b-footer']}>
                         <div className="flex">
-                        <img src="/images/logo.webp" className={styles["logo"]} alt="" />
+                        <img src="/images/IMG_8572.png" className={styles["logo"]} alt="" />
                         <div>
                             <div className="flex text-sm font-medium text-slate-400 mt-4">
                                 {data?.page?.status === "UP" ? (
