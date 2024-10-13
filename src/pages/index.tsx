@@ -46,7 +46,7 @@ export default function Home() {
                 <div className={styles['main-content-children']}>
                     <div className={styles['main-content-image']}>
                         <figure>
-                            <img src={'/images/logo.webp'} alt={'Tox Mod Logo'} />
+                            <img src={'/images/IMG_8572.png'} alt={'Git Logs Logo'} />
                         </figure>
                     </div>
                 </div>
