@@ -32,7 +32,7 @@ export default function NotFound() {
                                     </span>
                                 </h1>
                                 <p className="mt-3 text-base text-gray-500 sm:mx-auto sm:mt-5 sm:text-md md:mt-5 md:text-md lg:mx-0 font-fredoka">
-                                    Thanks for inviting Migizi to your server and showing us some love. We appreciate the support.
+                                    Thanks for inviting Git Logs to your server and showing us some love. We appreciate the support.
                                 </p>
                             </div>
                             <div className={styles['main-content-buttons']}>
