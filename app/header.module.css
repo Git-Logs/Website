@@ -1,0 +1,8 @@
+.header {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header h1 {
+    margin-left: 0.5rem; /* Adjust spacing between logo and text */
+  }

@@ -1,0 +1,50 @@
+---
+title: Create Repository
+description: The newrepo command allows you to create a new repository for a webhook in a guild for sending GitHub notifications. This command is useful for setting up repositories to receive GitHub events in your Discord server.
+
+icon: FolderPlus
+---
+
+### Command Usage
+> The `newrepo` command is available as both a slash command and a prefixed command using the prefix `git!`
+
+When you run the `/newrepo` command, the bot will create a new repository for the specified webhook in the guild. If the guild or webhook does not exist in the database, appropriate messages will be displayed.
+
+### Parameters
+
+- **webhook_id**: The webhook ID to use (can be found in the `list` command).
+- **owner**: The repo owner or organization.
+- **name**: The repo name.
+- **channel**: The channel to send to.
+
+### Example
+
+```plaintext
+/newrepo webhook_id:12345 owner:octocat name:my-repo channel:#general
+```
+
+> In this example, the command creates a new repository with the owner "octocat", repo name "my-repo", and sends notifications to the "#general" channel using the webhook with ID `12345`.
+
+### Permissions
+This command **requires** the `MANAGE_GUILD` permission to execute. This is for security purposes to avoid letting unauthorized users create repositories in your guild.
+
+### Cooldown
+This command has a **guild cooldown** of 60 seconds to prevent spam.
+
+## Responses
+When this command is triggered, the bot will respond with the following data:
+
+| Field             | Description                                                                 |
+|-------------------|-----------------------------------------------------------------------------|
+| **Repository ID** | The unique identifier for the repository.                                   |
+| **Webhook ID**    | The webhook ID associated with the repository.                              |
+| **Repo Name**     | The name of the repository.                                                 |
+| **Channel ID**    | The ID of the channel where notifications will be sent.                     |
+| **Created By**    | The user who created the repository.                                        |
+| **Last Updated By** | The user who last updated the repository.                                  |
+
+## Notes
+- If the guild does not exist in the database, the command will insert a new record for the guild.
+- If the webhook does not exist in the database, the command will notify the user that the webhook does not exist.
+- If the repository already exists, the command will notify the user and suggest using the `/delrepo` command to delete it.
+- The bot will ensure that the repository is correctly associated with the specified webhook and channel for notifications.

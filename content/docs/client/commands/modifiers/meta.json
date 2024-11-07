@@ -1,0 +1,10 @@
+{
+    "title": "Event Modifiers",
+    "description": "Customize how events are handled by your webhooks, including creating and deleting event modifiers.",
+    "defaultOpen": false,
+    "icon": "Terminal",
+    "pages": [
+        "create",
+        "delete"
+    ]
+}

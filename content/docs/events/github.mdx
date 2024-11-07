@@ -1,0 +1,85 @@
+---
+title: Github Events
+description: Explore all of the events available via the GitHub API.
+icon: GitMerge
+---
+
+<Callout title="Important Info" type="info">
+  This table lists all GitHub webhook events and indicates whether they are currently supported by Octohooks.
+</Callout>
+
+| Event                          | Description                                                                 | Supported |
+|--------------------------------|-----------------------------------------------------------------------------|-----------|
+| branch_protection_configuration| Triggered when a branch protection configuration is created, updated, or deleted. | X         |
+| branch_protection_rule         | Triggered when a branch protection rule is created, edited, or deleted.     | ✔️        |
+| check_run                      | Triggered when a check run is created, rerequested, or completed.           | ✔️        |
+| check_suite                    | Triggered when a check suite is completed, requested, or rerequested.       | ✔️        |
+| code_scanning_alert            | Triggered when a code scanning alert is created, fixed, reopened, or closed.| X         |
+| commit_comment                 | Triggered when a comment is created, edited, or deleted on a commit.        | ✔️        |
+| create                         | Triggered when a branch or tag is created.                                  | ✔️        |
+| custom_property                | Triggered when a custom property is created, updated, or deleted.           | X         |
+| custom_property_values         | Triggered when custom property values are created, updated, or deleted.     | X         |
+| delete                         | Triggered when a branch or tag is deleted.                                  | ✔️        |
+| dependabot_alert               | Triggered when a Dependabot alert is created, dismissed, or resolved.       | ✔️        |
+| deploy_key                     | Triggered when a deploy key is added or removed from a repository.          | X         |
+| deployment                     | Triggered when a deployment is created or updated.                          | ✔️        |
+| deployment_protection_rule     | Triggered when a deployment protection rule is created, updated, or deleted.| X         |
+| deployment_review              | Triggered when a deployment review is requested, approved, or rejected.     | X         |
+| deployment_status              | Triggered when the status of a deployment changes.                          | ✔️        |
+| discussion                     | Triggered when a discussion is created, edited, deleted, pinned, unpinned, locked, unlocked, transferred, answered, or unanswered. | ✔️        |
+| discussion_comment             | Triggered when a comment is created, edited, or deleted in a discussion.    | ✔️        |
+| fork                           | Triggered when a repository is forked.                                      | ✔️        |
+| github_app_authorization       | Triggered when a GitHub App authorization is revoked.                       | X         |
+| gollum                         | Triggered when a Wiki page is created or updated.                           | X         |
+| installation                   | Triggered when a GitHub App is installed or uninstalled.                    | X         |
+| installation_repositories      | Triggered when a repository is added or removed from an installation.       | X         |
+| installation_target            | Triggered when an installation target is created, updated, or deleted.      | X         |
+| issue_comment                  | Triggered when a comment is created, edited, or deleted on an issue.        | ✔️        |
+| issues                         | Triggered when an issue is opened, edited, closed, reopened, assigned, unassigned, labeled, unlabeled, locked, unlocked, transferred, milestoned, or demilestoned. | ✔️        |
+| label                          | Triggered when a label is created, edited, or deleted.                      | X         |
+| marketplace_purchase           | Triggered when a user purchases, cancels, or changes their GitHub Marketplace plan. | X         |
+| member                         | Triggered when a user is added or removed as a collaborator to a repository, or has their permissions changed. | X         |
+| membership                     | Triggered when a user is added or removed from a team.                      | X         |
+| merge_group                    | Triggered when a merge group is created, updated, or deleted.               | X         |
+| meta                           | Triggered when the webhook configuration is updated.                       | X         |
+| milestone                      | Triggered when a milestone is created, closed, opened, edited, or deleted.  | X         |
+| org_block                      | Triggered when an organization blocks or unblocks a user.                   | X         |
+| organization                   | Triggered when an organization is created, deleted, renamed, or has its billing email updated. | X         |
+| package                        | Triggered when a package is published or updated.                           | X         |
+| page_build                     | Triggered when a Pages site is built or results in a failed build.          | ✔️        |
+| personal_access_token_request  | Triggered when a personal access token request is created, approved, or denied. | X         |
+| ping                           | Triggered when a ping event is sent to test the webhook configuration.      | X         |
+| project_card                   | Triggered when a project card is created, updated, moved, converted to an issue, or deleted. | X         |
+| project                        | Triggered when a project is created, updated, closed, reopened, or deleted. | X         |
+| project_column                 | Triggered when a project column is created, updated, moved, or deleted.     | X         |
+| projects_v2                    | Triggered when a Projects v2 project is created, updated, or deleted.       | X         |
+| projects_v2_item               | Triggered when a Projects v2 item is created, updated, or deleted.          | X         |
+| projects_v2_status_update      | Triggered when a Projects v2 status update is created, updated, or deleted. | X         |
+| public                         | Triggered when a private repository is made public.                        | ✔️        |
+| pull_request                   | Triggered when a pull request is opened, edited, closed, reopened, assigned, unassigned, labeled, unlabeled, locked, unlocked, or synchronized. | ✔️        |
+| pull_request_review_comment    | Triggered when a comment is created, edited, or deleted on a pull request review. | ✔️        |
+| pull_request_review            | Triggered when a pull request review is submitted, edited, or dismissed.    | ✔️        |
+| pull_request_review_thread     | Triggered when a pull request review thread is created, edited, or resolved.| X         |
+| push                           | Triggered when commits are pushed to a repository branch or tag.            | ✔️        |
+| registry_package               | Triggered when a registry package is published or updated.                  | X         |
+| release                        | Triggered when a release is published, unpublished, created, edited, deleted, or prereleased. | ✔️        |
+| repository_advisory            | Triggered when a repository advisory is created, updated, or deleted.       | X         |
+| repository                     | Triggered when a repository is created, deleted, archived, unarchived, publicized, or privatized. | ✔️        |
+| repository_dispatch            | Triggered when a repository dispatch event is triggered.                   | X         |
+| repository_import              | Triggered when a repository import is started, completed, or failed.        | X         |
+| repository_ruleset             | Triggered when a repository ruleset is created, updated, or deleted.        | X         |
+| repository_vulnerability_alert | Triggered when a repository vulnerability alert is created, dismissed, or resolved. | X         |
+| secret_scanning_alert          | Triggered when a secret scanning alert is created, resolved, or reopened.   | X         |
+| secret_scanning_alert_location | Triggered when a secret scanning alert location is created, updated, or deleted. | X         |
+| security_advisory              | Triggered when a security advisory is published, updated, or withdrawn.     | X         |
+| security_and_analysis          | Triggered when security and analysis features are enabled or disabled for a repository. | X         |
+| sponsorship                    | Triggered when a sponsorship is created, updated, or cancelled.             | X         |
+| star                           | Triggered when a repository is starred.                                     | ✔️        |
+| status                         | Triggered when the status of a Git commit changes.                          | ✔️        |
+| sub_issues                     | Triggered when sub-issues are created, updated, or deleted.                 | X         |
+| team_add                       | Triggered when a repository is added to a team.                             | X         |
+| team                           | Triggered when a team is created, updated, or deleted.                      | ✔️        |
+| watch                          | Triggered when someone stars a repository.                                  | ✔️        |
+| workflow_dispatch              | Triggered when a workflow dispatch event is triggered.                     | X         |
+| workflow_job                   | Triggered when a GitHub Actions workflow job is queued, started, or completed. | ✔️        |
+| workflow_run                   | Triggered when a GitHub Actions workflow run is requested or completed.     | ✔️        |

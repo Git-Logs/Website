@@ -1,0 +1,43 @@
+---
+title: Create a Webhook
+description: Before you can start listening to events, you will need to create a new webhook. Follow the steps below to create a webhook using the Git Logs bot.
+icon: Webhook
+---
+
+import { Step, Steps } from 'fumadocs-ui/components/steps';
+
+<Steps>
+  <Step>
+    ### Step 1: Ensure Permissions
+    Ensure the bot and yourself have the `Use Application Commands` permissions in the server.
+  </Step>
+
+  <Step>
+    ### Step 2: Run the [`/newhook`](/docs/client/commands/core/newhook) Command
+    Run the `/newhook` command in your Discord server.
+    ![newhook command](/samples/repo/newhook-cmd.png)
+  </Step>
+
+  <Step>
+    ### Step 3: Receive Webhook Information
+    Once the webhook is generated, the bot will send you a Direct Message that looks something like this:
+    ![webhook message](/samples/repo/webhook-dm.png)
+  </Step>
+
+  <Step>
+    ### Step 4: Note Down Webhook Details
+    This direct message will contain all the information you need to continue to the `Using a Webhook` section. The information you will need is:
+    - Webhook URL (located at the top of the message)
+    - Webhook Secret (Located in the second paragraph "`Set the Secret field to`")
+    - Content Type (will always be `application/json`)
+    - Webhook ID (Located in the third paragraph "`When creating repositories use`")
+  </Step>
+</Steps>
+
+## Additional Information
+
+- **Permissions**: Ensure that both you and the bot have the necessary permissions to create and manage webhooks.
+- **Direct Messages**: Make sure your DMs are open to receive the webhook information from the bot.
+- **Troubleshooting**: If you encounter any issues during the webhook creation process, please refer to our [support server](https://discord.gg/N4hnRmEJMX) for assistance.
+
+By following these steps, you will successfully create a webhook using the Git Logs bot, allowing you to start receiving GitHub notifications in your Discord server.

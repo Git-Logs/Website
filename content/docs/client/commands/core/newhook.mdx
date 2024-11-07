@@ -1,0 +1,48 @@
+---
+title: Create Webhook
+description: The newhook command allows you to create new webhooks in your Discord server to receive GitHub notifications, ensuring that your team stays updated with the latest events.
+icon: CirclePlus
+---
+
+### Command Usage
+> The `newhook` command is available as both a slash command and a prefixed command using the prefix `git!`
+
+When you run the `/newhook` command, the bot will create a new webhook in the guild and send the webhook credentials to your DMs. If the guild does not exist in the database, it will be created automatically.
+
+### Parameters
+
+- **comment**: The comment for the webhook.
+- **broken** (optional): Indicates whether the webhook is broken.
+
+### Example
+
+```plaintext
+/newhook comment:hi broken:false
+```
+
+> In this example, the command creates a new webhook with the comment "hi" and indicates that the webhook is not broken.
+
+### Permissions
+This command **requires** the `MANAGE_GUILD` permission to execute. This is for security purposes to avoid letting unauthorized users create webhooks in your guild.
+
+### Cooldown
+This command has a **guild cooldown** of 60 seconds to prevent spam.
+
+## Responses
+When this command is triggered, the bot will respond with the following data:
+
+| Field             | Description                                                                 |
+|-------------------|-----------------------------------------------------------------------------|
+| **Webhook ID**    | The unique identifier for the webhook.                                      |
+| **Hook URL**      | The URL to visit for hook information and to add to GitHub to receive events.|
+| **Secret**        | The secret key to be used when setting up the webhook in GitHub.             |
+| **Marked as Broken** | Indicates whether the webhook is marked as broken.                          |
+| **Created at**    | The date and time when the webhook was created.                              |
+
+## Notes
+- If the guild does not exist in the database, the command will insert a new record for the guild.
+- If there are no webhooks configured in the guild, the command will prompt the user to create a new webhook using the `/newhook` or `git!newhook` command.
+- The bot will send the webhook credentials to the user's DMs. Ensure that DMs are enabled from server members.
+- The webhook credentials include the webhook ID, hook URL, and secret key. These credentials are necessary for setting up the webhook in GitHub.
+- The user must update the webhook information in GitHub settings with the provided hook URL and secret key for the webhook to accept messages from GitHub.
+- The bot will notify the user to delete the DM containing the webhook credentials after setting up the webhook in GitHub for security purposes.

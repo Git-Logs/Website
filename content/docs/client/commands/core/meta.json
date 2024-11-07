@@ -1,0 +1,15 @@
+{
+    "title": "Core Commands",
+    "description": "All of the bot's core commands and their usage.",
+    "defaultOpen": false,
+    "icon": "Settings",
+    "pages": [
+        "list",
+        "newhook",
+        "edithook",
+        "delhook",
+        "newrepo",
+        "setrepochannel",
+        "resetsecret"
+    ]
+}

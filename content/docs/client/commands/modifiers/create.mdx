@@ -1,0 +1,55 @@
+---
+title: Create Modifier
+description: The eventmod create command allows you to create a new event modifier on a webhook. This command is useful for customizing how events are handled by your webhooks.
+icon: CirclePlus
+---
+
+## Command Usage
+> The `create` command is available as both a slash command and a prefixed command using the prefix `git!`
+
+When you run the `/eventmod create` command, the bot will create a new event modifier for the specified webhook in the guild. If the guild or webhook does not exist in the database, appropriate messages will be displayed.
+
+### Parameters
+
+- **webhook_id**: The webhook ID.
+- **events**: The events to match against, comma/space separated.
+- **blacklisted**: Blacklist the events.
+- **whitelisted**: Whitelist the events. Other events will not be allowed.
+- **priority** (optional): Priority. Use 0 for normal priority.
+- **repo_id** (optional): Repository ID, will match all if unset.
+- **redirect_channel** (optional): Redirect channel ID.
+
+### Example
+
+```plaintext
+/eventmod create webhook_id:12345 events:push,pull_request blacklisted:false whitelisted:true priority:1 repo_id:67890 redirect_channel:#events
+```
+
+> In this example, the command creates a new event modifier for the webhook with ID `12345`, matching `push` and `pull_request` events, whitelisting them, with a priority of `1`, for the repository with ID `67890`, and redirecting to the `#events` channel.
+
+### Permissions
+This command **requires** the `MANAGE_GUILD` permission to execute. This is for security purposes to avoid letting unauthorized users create event modifiers in your guild.
+
+### Cooldown
+This command has a **guild cooldown** of 60 seconds to prevent spam.
+
+## Responses
+When this command is triggered, the bot will respond with the following data:
+
+| Field             | Description                                                                 |
+|-------------------|-----------------------------------------------------------------------------|
+| **Modifier ID**   | The unique identifier for the event modifier.                                |
+| **Webhook ID**    | The webhook ID associated with the event modifier.                           |
+| **Events**        | The events matched by the event modifier.                                    |
+| **Repo ID**       | The repository ID associated with the event modifier.                        |
+| **Redirect Channel** | The channel ID where events are redirected.                                |
+| **Priority**      | The priority of the event modifier.                                          |
+| **Created By**    | The user who created the event modifier.                                     |
+| **Last Updated By** | The user who last updated the event modifier.                               |
+
+## Notes
+- If the guild does not exist in the database, the command will insert a new record for the guild.
+- If the webhook does not exist in the database, the command will notify the user that the webhook does not exist.
+- If the repository does not exist in the database, the command will notify the user that the repository does not exist.
+- The bot will update the event modifier's `last_updated_by` field to reflect the user who made the change.
+- You can only have up to 10 event modifiers per webhook.

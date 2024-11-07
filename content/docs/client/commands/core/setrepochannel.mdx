@@ -1,0 +1,43 @@
+---
+title: Set Repository Channel
+description: The setrepochannel command allows you to update the channel for a repository in a guild. This command is useful for changing the channel where GitHub notifications for a specific repository are sent.
+icon: Cog
+---
+
+### Command Usage
+> The `setrepochannel` command is available as both a slash command and a prefixed command using the prefix `git!`
+
+When you run the `/setrepochannel` command, the bot will update the specified repository's channel in the guild. If the repository does not exist in the database, an appropriate message will be displayed.
+
+### Parameters
+
+- **id**: The repository ID (can be found using the `list` command).
+- **channel**: The new channel ID.
+
+### Example
+
+```plaintext
+/setrepochannel id:12345 channel:#new-channel
+```
+
+> In this example, the command updates the repository with ID `12345` to send notifications to the `#new-channel`.
+
+### Permissions
+This command **requires** the `MANAGE_GUILD` permission to execute. This is for security purposes to avoid letting unauthorized users update repository channels in your guild.
+
+### Cooldown
+This command has a **guild cooldown** of 60 seconds to prevent spam.
+
+## Responses
+When this command is triggered, the bot will respond with the following data:
+
+| Field             | Description                                                                 |
+|-------------------|-----------------------------------------------------------------------------|
+| **Repository ID** | The unique identifier for the repository.                                   |
+| **Channel ID**    | The ID of the new channel where notifications will be sent.                 |
+| **Last Updated By** | The user who last updated the repository.                                  |
+
+## Notes
+- If the repository does not exist in the database, the command will notify the user that the repository does not exist.
+- The bot will update the repository's `last_updated_by` field to reflect the user who made the change.
+- Ensure that the new channel ID is valid and that the bot has permission to send messages in the specified channel.

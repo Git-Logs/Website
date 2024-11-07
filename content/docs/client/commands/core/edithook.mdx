@@ -1,0 +1,55 @@
+---
+title: Edit Webhook
+description: Edits an existing webhook in a guild for sending GitHub notifications.
+icon: Pen
+---
+
+# Edit Webhook
+
+The `edithook` command allows you to edit an existing webhook in a guild for sending GitHub notifications. This command is useful for updating the webhook's comment, status, or secret.
+
+## Command Details
+
+### Command Usage
+> The `edithook` command is available as both a slash command and a prefixed command using the prefix `git!`
+
+When you run the `/edithook` command, the bot will update the specified webhook in the guild with the provided parameters. If the guild or webhook does not exist in the database, appropriate messages will be displayed.
+
+### Parameters
+
+- **id**: The webhook ID (can be found using the `list` command).
+- **comment** (optional): The comment for the webhook.
+- **broken** (optional): Indicates whether the webhook is broken.
+- **webhook_secret** (optional): The new secret for the webhook.
+
+### Example
+
+```plaintext
+/edithook id:12345 comment:"Updated comment" broken:false webhook_secret:"newsecret"
+```
+
+> In this example, the command updates the webhook with ID `12345`, sets the comment to "Updated comment", marks the webhook as not broken, and updates the secret to "newsecret".
+
+### Permissions
+This command **requires** the `MANAGE_GUILD` permission to execute. This is for security purposes to avoid letting unauthorized users edit webhooks in your guild.
+
+### Cooldown
+This command has a **guild cooldown** of 60 seconds to prevent spam.
+
+## Responses
+When this command is triggered, the bot will respond with the following data:
+
+| Field             | Description                                                                 |
+|-------------------|-----------------------------------------------------------------------------|
+| **Webhook ID**    | The unique identifier for the webhook.                                      |
+| **Comment**       | The comment associated with the webhook.                                    |
+| **Marked as Broken** | Indicates whether the webhook is marked as broken.                          |
+| **Secret**        | The secret key to be used when setting up the webhook in GitHub.             |
+| **Last Updated At** | The date and time when the webhook was last updated.                        |
+| **Last Updated By** | The user who last updated the webhook.                                      |
+
+## Notes
+- If the guild does not exist in the database, the command will insert a new record for the guild.
+- If the webhook does not exist in the database, the command will notify the user that the webhook does not exist.
+- The bot will update the webhook's `last_updated_at` and `last_updated_by` fields regardless of which parameters are provided.
+- Ensure that the new secret is updated in GitHub settings to maintain the webhook's functionality.

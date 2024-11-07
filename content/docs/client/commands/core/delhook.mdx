@@ -1,0 +1,41 @@
+---
+title: Delete Webhook
+description: The delhook command allows you to delete an existing webhook in a guild. This command is useful for removing webhooks that are no longer needed.
+icon: Trash
+---
+
+### Command Usage
+> The `delhook` command is available as both a slash command and a prefixed command using the prefix `git!`
+
+When you run the `/delhook` command, the bot will delete the specified webhook in the guild. If the guild or webhook does not exist in the database, appropriate messages will be displayed.
+
+### Parameters
+
+- **id**: The webhook ID (can be found using the `list` command).
+
+### Example
+
+```plaintext
+/delhook id:12345
+```
+
+> In this example, the command deletes the webhook with ID `12345`.
+
+### Permissions
+This command **requires** the `MANAGE_GUILD` permission to execute. This is for security purposes to avoid letting unauthorized users delete webhooks in your guild.
+
+### Cooldown
+This command has a **guild cooldown** of 60 seconds to prevent spam.
+
+## Responses
+When this command is triggered, the bot will respond with the following data:
+
+| Field             | Description                                                                 |
+|-------------------|-----------------------------------------------------------------------------|
+| **Webhook ID**    | The unique identifier for the webhook.                                      |
+| **Status**        | Indicates whether the webhook was successfully deleted.                     |
+
+## Notes
+- If the guild does not exist in the database, the command will notify the user that there are no webhooks in the guild.
+- If the webhook does not exist in the database, the command will notify the user that the webhook does not exist.
+- The bot will confirm the deletion of the webhook to ensure that the user is aware of the successful removal.

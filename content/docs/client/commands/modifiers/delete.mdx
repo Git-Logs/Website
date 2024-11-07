@@ -1,0 +1,40 @@
+---
+title: Delete Modifier
+description: The delete command allows you to delete an existing event modifier by ID. This command is useful for removing event modifiers that are no longer needed.
+icon: Trash
+---
+
+## Command Usage
+> The `delete` command is available as both a slash command and a prefixed command using the prefix `git!`
+
+When you run the `/delete` command, the bot will delete the specified event modifier in the guild. If the guild or event modifier does not exist in the database, appropriate messages will be displayed.
+
+### Parameters
+
+- **modifier_id**: The event modifier ID.
+
+### Example
+
+```plaintext
+/eventmod delete modifier_id:12345
+```
+
+> In this example, the command deletes the event modifier with ID `12345`.
+
+### Permissions
+This command **requires** the `MANAGE_GUILD` permission to execute. This is for security purposes to avoid letting unauthorized users delete event modifiers in your guild.
+
+### Cooldown
+This command has a **guild cooldown** of 60 seconds to prevent spam.
+
+## Responses
+When this command is triggered, the bot will respond with the following data:
+
+| Field             | Description                                                                 |
+|-------------------|-----------------------------------------------------------------------------|
+| **Modifier ID**   | The unique identifier for the event modifier.                                |
+| **Status**        | Indicates whether the event modifier was successfully deleted.               |
+
+## Notes
+- If the guild does not exist in the database, the command will notify the user that there are no event modifiers in the guild.
+- If the event modifier does not exist in the database, the command will notify the user that the event modifier does not exist.

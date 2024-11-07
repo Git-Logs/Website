@@ -1,0 +1,73 @@
+---
+title: Push Event
+description: The push event is triggered when commits are pushed to a repository branch or tag. This event is commonly used to notify external services about changes in the repository, such as new commits, branch updates, or tag creations.
+icon: GitCommit
+---
+
+## Event Description
+
+When a `push` event occurs, GitHub sends a payload containing detailed information about the push. This includes the commits that were pushed, the branch or tag that was updated, and the repository where the push occurred.
+
+### Payload Example
+
+Here is an example of the payload sent by GitHub for a `push` event:
+
+```json
+{
+  "ref": "refs/heads/main",
+  "before": "9049f1265b7d61be4a8904a9a27120d2064dab3b",
+  "after": "b4a9f1265b7d61be4a8904a9a27120d2064dab3b",
+  "repository": {
+    "id": 12345678,
+    "name": "example-repo",
+    "full_name": "octocat/example-repo",
+    "owner": {
+      "name": "octocat",
+      "email": "octocat@example.com"
+    }
+  },
+  "pusher": {
+    "name": "octocat",
+    "email": "octocat@example.com"
+  },
+  "commits": [
+    {
+      "id": "b4a9f1265b7d61be4a8904a9a27120d2064dab3b",
+      "message": "Fix all the bugs",
+      "timestamp": "2021-01-01T12:34:56Z",
+      "url": "https://github.com/octocat/example-repo/commit/b4a9f1265b7d61be4a8904a9a27120d2064dab3b",
+      "author": {
+        "name": "octocat",
+        "email": "octocat@example.com"
+      }
+    }
+  ]
+}
+```
+
+## How Octohooks Handles the Push Event
+
+Octohooks listens for `push` events and can be configured to perform various actions when this event is triggered. For example, you can set up Octohooks to post a message in a Discord channel whenever a push occurs in your repository.
+
+### Example Configuration
+
+To configure Octohooks to handle `push` events, follow these steps:
+
+1. **Create a Webhook**: Use the `/newhook` command to create a new webhook in your Discord server.
+2. **Set Up the Webhook in GitHub**: Add the webhook URL provided by Octohooks to your GitHub repository's webhook settings. Ensure that the `push` event is selected.
+3. **Configure Event Modifiers**: Use the `/create` command to create an event modifier for the `push` event. This allows you to customize how the event is handled and displayed in your Discord channel.
+
+### Example Command
+
+```plaintext
+/eventmod create webhook_id:12345 events:push blacklisted:false whitelisted:true priority:1 repo_id:67890 redirect_channel:#events
+```
+
+> In this example, the command creates an event modifier for the `push` event, ensuring that it is whitelisted and has a priority of 1. The event will be redirected to the `#events` channel in your Discord server.
+
+### Additional Information
+- Event Modifiers: Octohooks supports various event modifiers and filters, enabling you to fine-tune how push events are handled and displayed in your Discord channel.
+- Troubleshooting: If you encounter any issues while setting up or using the push event, please refer to our support server for assistance.
+
+
+By integrating the push event with Octohooks, you can automate notifications and streamline your workflow, ensuring your team stays informed about important repository activities.

@@ -1,0 +1,86 @@
+---
+title: Use Your Webhook
+description: To set up webhook events for your GitHub Repository or Organization, please follow the steps below. You will first need to create a webhook and payload URL using Git Logs. See [here](/docs/setup/create-webhook) for details.
+icon: WebhookOff
+---
+
+import { Step, Steps } from 'fumadocs-ui/components/steps';
+
+<Callout title="Important Info" type="info">
+  Webhooks can be set up for either a Repository or an Organization. Adding webhooks to an organization is more seamless in most cases. 
+  We recommend setting them up for the entire org when and where possible! Steps are the same for both.
+</Callout>
+
+<Steps>
+  <Step>
+    ### Step 1: Navigate to your Repository/Organization
+    Go to the GitHub repository or organization where you want to set up the webhook.
+  </Step>
+
+  <Step>
+    ### Step 2: Open the Repository Settings
+    Click on the "Settings" tab in the repository menu.
+    ![repo-settings](/samples/repo/settings.png)
+  </Step>
+
+  <Step>
+    ### Step 3: Open Webhook Settings
+    Select the "Webhooks" tab from the left sidebar of the settings page and then click on the `Add webhook` button.
+    ![add-hook](/samples/repo/add-hook.png)
+  </Step>
+
+  <Step>
+    ### Step 4: Add your Webhook
+    In the `Add webhook` page/tab, you want to fill out the form with the information provided to you by Git Logs. Here is an example of the required information:
+    - Payload URL: `https://v2.gitlogs.xyz/kittycat?id=WEBHOOK_ID`
+    - Content type: `application/json` (this will never change)
+    - Secret: should match the secret provided to you by Git Logs
+    - SSL verification: you can enable or disable this as you see fit
+    - Which events: this option is also entirely up to you. If you choose "send me everything," we can blacklist events you don't want to see.
+    ![steps](/samples/repo/steps.png)
+    ![webhook form](/samples/repo/webhook-form.png)
+  </Step>
+
+  <Step>
+    ### Step 5: Monitor your Repo
+    Once you have completed all the steps above, you are ready to run the `/newrepo` command in the bot. This command will link your repository to your webhook and allow you to monitor webhook events such as `Pull Requests`, `Deployments`, and more. The command params should be filled out like so:
+
+    #### Command Params
+    <TypeTable
+      type={{
+        webhook_id: {
+          description: 'Your Webhook ID',
+          type: 'string',
+        },
+        owner: {
+          description: 'Your GitHub User/Org Name',
+          type: 'string'
+        },
+        name: {
+          description: 'Your GitHub Repository Name',
+          type: 'string'
+        },
+        channel: {
+          description: 'The Discord Channel to send event logs to',
+          type: 'string'
+        }
+      }}
+    />
+
+    #### Param Details
+    - `webhook_id`: your webhook ID provided to you by Git Logs 
+    - `owner`: your GitHub user/organization name (ex: Git-Logs)
+    - `name`: your repository name (ex: Documentation)
+    - `channel`: the Discord channel to send events to
+
+    ![new repo](/samples/repo/newrepo-cmd.png)
+  </Step>
+</Steps>
+
+## Additional Information
+
+- **Repository/Organization**: Ensure you have the necessary permissions to add webhooks to the selected repository or organization.
+- **Webhook Information**: Double-check the webhook URL, secret, and selected events to ensure they are correct.
+- **Troubleshooting**: If you encounter any issues during the webhook setup process, please refer to our [support server](https://discord.gg/N4hnRmEJMX) for assistance.
+
+By following these steps, you will successfully set up and use your webhook with GitHub, allowing you to receive notifications and manage your repositories more efficiently.

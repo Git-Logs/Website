@@ -1,0 +1,10 @@
+{
+    "title": "Octohooks -v2.0.0",
+    "description": "The Webhook Client",
+    "icon": "Webhook",
+    "root": true,
+    "pages": [
+        "github",
+        "supported"
+    ]
+}

@@ -1,0 +1,43 @@
+---
+title: List Webhooks
+description: The list command retrieves and displays all webhooks configured in the current guild. It provides detailed information about each webhook, including its ID, status, and creation date.
+icon: List
+---
+
+### Command Usage
+> The `list` command is available as both a slash command and a prefixed command using the prefix `git!`
+
+When you run the `/list` command, the bot will respond with a message listing all the webhooks in the guild. If there are no webhooks configured, it will prompt you to create a new webhook using the `/newhook` command.
+
+### Parameters
+
+This command does not require any parameters.
+
+### Example
+
+```plaintext
+/list
+```
+
+> In this example, the command lists all webhooks configured in the current guild.
+
+### Permissions
+This command **requires** the `MANAGE_GUILD` permission to execute. This is for security purposes to avoid letting unauthorized users view your active webhooks and their respective information.
+
+### Cooldown
+This command does not have a cooldown.
+
+## Responses
+When this command is triggered and the user/team has at least one webhook set up in their Discord server, the bot will respond with the following data:
+
+| Field             | Description                                                                 |
+|-------------------|-----------------------------------------------------------------------------|
+| **Webhook ID**    | The unique identifier for the webhook.                                      |
+| **Hook URL**      | The URL to visit for hook information and to add to GitHub to receive events.|
+| **Marked as Broken** | Indicates whether the webhook is marked as broken.                          |
+| **Created at**    | The date and time when the webhook was created.                              |
+
+## Notes
+- If the guild does not exist in the database, the command will insert a new record for the guild and prompt the user to create a new webhook.
+- If there are no webhooks configured in the guild, the command will prompt the user to create a new webhook using the `/newhook` or `git!newhook` command.
+- The bot will provide a summary of all webhooks, including their status and creation date, to help you manage and monitor your webhooks effectively.

@@ -1,0 +1,20 @@
+{
+    ignores: [
+        "tailwindcss",
+        "autoprefixer",
+        "fumadocs-core",
+        "fumadocs-docgen",
+        "fumadocs-twoslash",
+        "fumadocs-typescript",
+        "fumadocs-mdx",
+        "fumadocs-ui",
+        "next",
+        "postcss",
+        "react",
+        "react-dom",
+        "react-icon",
+        "typescript",
+        "ts-morph",
+        "tsx"
+    ]
+}

@@ -1,0 +1,18 @@
+# Node Stuff
+.env*
+node_modules
+package-lock.json
+
+# Generated Docs Content
+# Best to keep this up to date with the content/docs folder
+content/docs/openapi/**/*.mdx
+!content/docs/openapi/index.mdx
+
+# Next.js stuff
+!next-env.d.ts
+
+## Build files
+out
+dist
+.next
+.source

@@ -1,0 +1,40 @@
+---
+title: GitHub Events
+description: Learn about GitHub Webhook events, how Octohooks uses them, and what they do!
+icon: Webhook
+---
+
+import { ListCheckIcon, ListIcon } from 'lucide-react';
+import { Step, Steps } from 'fumadocs-ui/components/steps';
+import { TypeTable } from 'fumadocs-ui/components/type-table';
+
+## Introduction
+
+GitHub webhook events allow you to receive real-time notifications about activities in your GitHub repositories. These events can be configured to trigger specific actions in your applications, such as sending messages to a Discord channel using the Octohooks service.
+
+Webhooks are a powerful feature that enables your GitHub repository to communicate with external services. When certain actions occur in your repository, such as a push, pull request, or issue creation, GitHub can send an HTTP POST request to a specified URL. This request contains a payload with detailed information about the event, allowing your application to respond accordingly.
+
+By integrating GitHub webhook events with the Octohooks service, you can automate notifications and streamline your workflow. For example, you can set up Octohooks to post updates in a Discord channel whenever a new issue is created, a pull request is merged, or a deployment is completed. This ensures that your team stays informed about important repository activities without having to manually check GitHub.
+
+To set up webhook events, you need to configure your GitHub repository to send events to the Octohooks webhook URL. You can customize which events you want to receive notifications for, allowing you to tailor the integration to your specific needs. Additionally, Octohooks supports various event modifiers and filters, enabling you to fine-tune how events are handled and displayed in your Discord channel.
+
+Overall, GitHub webhook events provide a seamless way to keep your team updated on repository activities and enhance collaboration through automated notifications and integrations.
+
+---
+
+### In this Section
+
+<Cards>
+  <Card
+    icon={<ListIcon />}
+    href="/docs/webhooks/all"
+    title="All Webhook Events"
+    description="Explore all of the events available via the GitHub API."
+  />
+  <Card
+    icon={<ListCheckIcon />}
+    href="/docs/webhooks/supported"
+    title="Supported Webhook Events"
+    description="Discover all of the events that Octohooks currently supports and listens for."
+  />
+</Cards>

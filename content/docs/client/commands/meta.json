@@ -1,0 +1,10 @@
+{
+    "title": "Commands",
+    "description": "All of the bots available commands and their usage.",
+    "icon": "Terminal",
+    "pages": [
+        "index.mdx",
+        "core",
+        "modifiers"
+    ]
+}

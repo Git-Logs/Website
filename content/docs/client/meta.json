@@ -1,0 +1,12 @@
+{
+  "title": "Octoapp - v2.0.0",
+  "description": "The Discord Application",
+  "icon": "Bot",
+  "root": true,
+  "pages": [
+    "invite",
+    "webhook-setup",
+    "github-setup",
+    "commands"
+  ]
+}
