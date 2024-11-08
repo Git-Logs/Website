@@ -96,7 +96,7 @@ export const baseOptions: BaseLayoutProps = {
         },
         {
           icon: <SiRobotframework />,
-          text: 'Octyflow',
+          text: 'Octoflow',
           description: 'Keep your team updated and never miss another flow 😉!',
           url: '/docs/client',
           menu: {
@@ -105,7 +105,7 @@ export const baseOptions: BaseLayoutProps = {
         },
         {
           icon: <WebhookIcon />,
-          text: 'Octyhooks',
+          text: 'Octohooks',
           description:
             'Start hooking up your GitHub repositories and get notified about all the activities.',
           url: '/docs/events',

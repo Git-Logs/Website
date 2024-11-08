@@ -5,6 +5,7 @@
     "pages": [
         "index.mdx",
         "core",
+        "backups",
         "modifiers"
     ]
 }

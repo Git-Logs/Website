@@ -1,0 +1,79 @@
+---
+title: Pull Request Event
+description: The pull request event is triggered when a pull request is opened, edited, closed, reopened, or synchronized. This event is commonly used to notify external services about changes in pull requests.
+icon: GitPullRequest
+---
+
+## Event Description
+
+When a `pull_request` event occurs, GitHub sends a payload containing detailed information about the pull request. This includes the action performed (e.g., opened, closed), the repository where the pull request was made, the user who made the pull request, and the details of the pull request itself.
+
+### Payload Example
+
+Here is an example of the payload sent by GitHub for a `pull_request` event:
+
+```json
+{
+  "action": "opened",
+  "repository": {
+    "id": 12345678,
+    "name": "example-repo",
+    "full_name": "octocat/example-repo",
+    "owner": {
+      "name": "octocat",
+      "email": "octocat@example.com"
+    }
+  },
+  "sender": {
+    "login": "octocat",
+    "id": 1,
+    "avatar_url": "https://github.com/images/error/octocat_happy.gif",
+    "html_url": "https://github.com/octocat"
+  },
+  "pull_request": {
+    "url": "https://api.github.com/repos/octocat/example-repo/pulls/1347",
+    "id": 1,
+    "number": 1347,
+    "title": "Amazing new feature",
+    "body": "Please pull these awesome changes",
+    "html_url": "https://github.com/octocat/example-repo/pull/1347",
+    "state": "open",
+    "locked": false,
+    "head": {
+      "ref": "feature-branch",
+      "label": "octocat:feature-branch"
+    },
+    "base": {
+      "ref": "main",
+      "label": "octocat:main"
+    }
+  }
+}
+```
+
+## How Octohooks Handles the Pull Request Event
+
+Octohooks listens for `pull_request` events and can be configured to perform various actions when this event is triggered. For example, you can set up Octohooks to post a message in a Discord channel whenever a pull request is opened, edited, closed, or merged in your repository.
+
+### Example Configuration
+
+To configure Octohooks to handle `pull_request` events, follow these steps:
+
+1. **Create a Webhook**: Use the `/newhook` command to create a new webhook in your Discord server.
+2. **Set Up the Webhook in GitHub**: Add the webhook URL provided by Octohooks to your GitHub repository's webhook settings. Ensure that the `pull_request` event is selected.
+3. **Configure Event Modifiers**: Use the `/create` command to create an event modifier for the `pull_request` event. This allows you to customize how the event is handled and displayed in your Discord channel.
+
+### Example Command
+
+```plaintext
+/eventmod create webhook_id:12345 events:pull_request blacklisted:false whitelisted:true priority:1 repo_id:67890 redirect_channel:#events
+```
+
+> In this example, the command creates an event modifier for the `pull_request` event, ensuring that it is whitelisted and has a priority of 1. The event will be redirected to the `#events` channel in your Discord server.
+
+### Additional Information
+
+- **Event Modifiers**: Octohooks supports various event modifiers and filters, enabling you to fine-tune how pull request events are handled and displayed in your Discord channel.
+- **Troubleshooting**: If you encounter any issues while setting up or using the pull request event, please refer to our [support server](https://discord.gg/N4hnRmEJMX) for assistance.
+
+By integrating the pull request event with Octohooks, you can automate notifications and streamline your workflow, ensuring your team stays informed about important repository activities.

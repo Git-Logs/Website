@@ -1,0 +1,42 @@
+---
+title: Backup Command
+description: The backup command allows you to create a backup of repositories and event modifiers associated with a webhook in your Discord server. This command is useful for saving the current configuration and restoring it later if needed.
+icon: Save
+---
+
+### Command Usage
+> The `backup` command is available as both a slash command and a prefixed command using the prefix `git!`
+
+When you run the `/backup` command, the bot will create a JSON file containing the backup data and send it to you as an attachment.
+
+### Parameters
+
+- **id**: The webhook ID (can be found using the `list` command).
+
+### Example
+
+```plaintext
+/backup id:12345
+```
+
+> In this example, the command creates a backup for the webhook with ID `12345`.
+
+### Permissions
+This command **requires** the `MANAGE_GUILD` permission to execute. This is for security purposes to avoid letting unauthorized users create backups in your guild.
+
+### Cooldown
+This command does not have a cooldown.
+
+## Responses
+When this command is triggered, the bot will respond with the following data:
+
+| Field             | Description                                                                 |
+|-------------------|-----------------------------------------------------------------------------|
+| **Backup File**   | A JSON file containing the backup data for the specified webhook.            |
+
+## Notes
+- If the guild does not exist in the database, the command will notify the user that there are no webhooks in the guild.
+- If the webhook does not exist in the database, the command will notify the user that the webhook does not exist.
+- The backup file will include information about repositories and event modifiers associated with the specified webhook.
+- Ensure that you save the backup file securely, as it contains sensitive information about your webhook configuration.
+- The backup file can be used to restore the configuration at a later time using the `/restore` command.

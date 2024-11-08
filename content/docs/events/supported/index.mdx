@@ -1,0 +1,69 @@
+---
+title: Supported Events
+description: Octohooks supports a variety of GitHub webhook events, allowing you to receive real-time notifications about activities in your GitHub repositories. This page provides an overview of the supported events and how you can use them to enhance your workflow.
+icon: ListCheck
+---
+
+> **NOTE:** the supported events docs are a work in progress as such the actual pages and information for each event may be inaccurate or incomplete (ie: there may be events missing or unfinished).
+
+## What are Webhook Events?
+
+Webhook events are notifications sent by GitHub to a specified URL when certain actions occur in your repository. These actions can include commits, pull requests, issues, and more. By configuring webhook events, you can automate notifications and integrate GitHub activities with external services like Discord.
+
+## Why Use Octohooks for Webhook Events?
+
+Octohooks makes it easy to integrate GitHub webhook events with your Discord server. With Octohooks, you can:
+
+- **Receive Real-Time Notifications**: Get instant updates on GitHub activities in your Discord channels.
+- **Customize Event Modifiers**: Tailor notifications to your needs with advanced event modifiers and filters.
+- **Enhance Collaboration**: Keep your team informed and improve collaboration with automated notifications.
+
+## How to Use Supported Events
+
+To use supported events with Octohooks, follow these steps:
+
+1. **Create a Webhook**: Use the `/newhook` command to create a new webhook in your Discord server.
+2. **Set Up the Webhook in GitHub**: Add the webhook URL provided by Octohooks to your GitHub repository's webhook settings. Select the events you want to receive notifications for.
+3. **Configure Event Modifiers**: Use the `/eventmod create` command to create event modifiers for the selected events. This allows you to customize how the events are handled and displayed in your Discord channel.
+
+## List of Supported Events
+
+Octohooks currently supports the following GitHub webhook events:
+
+| Event                          | Description                                                                 |
+|--------------------------------|-----------------------------------------------------------------------------|
+| star                           | This event occurs when there is activity relating to repository stars.      |
+| discussion_comment             | Triggered when a comment is created, edited, or deleted in a discussion.    |
+| delete                         | Triggered when a branch or tag is deleted.                                  |
+| workflow_job                   | Triggered when a GitHub Actions workflow job is queued, started, or completed. |
+| check_suite                    | Triggered when a check suite is completed, requested, or rerequested.       |
+| pull_request_review_comment    | Triggered when a comment is created, edited, or deleted on a pull request review. |
+| push                           | Triggered when commits are pushed to a repository branch or tag.            |
+| deployment                     | Triggered when a deployment is created or updated.                          |
+| team                           | Triggered when a team is created, deleted, or modified.                     |
+| page_build                     | Triggered when a Pages site is built or results in a failed build.          |
+| issues                         | Triggered when an issue is opened, edited, closed, reopened, assigned, unassigned, labeled, unlabeled, locked, unlocked, transferred, milestoned, or demilestoned. |
+| pull_request                   | Triggered when a pull request is opened, edited, closed, reopened, assigned, unassigned, labeled, unlabeled, locked, unlocked, or synchronized. |
+| commit_comment                 | Triggered when a comment is created, edited, or deleted on a commit.        |
+| public                         | Triggered when a private repository is made public.                        |
+| status                         | Triggered when the status of a Git commit changes.                          |
+| release                        | Triggered when a release is published, unpublished, created, edited, deleted, or prereleased. |
+| deployment_status              | Triggered when the status of a deployment changes.                          |
+| workflow_run                   | Triggered when a GitHub Actions workflow run is requested or completed.     |
+| check_run                      | Triggered when a check run is created, rerequested, or completed.           |
+| repository                     | Triggered when a repository is created, deleted, archived, unarchived, publicized, or privatized. |
+| issue_comment                  | Triggered when a comment is created, edited, or deleted on an issue.        |
+| discussion                     | Triggered when a discussion is created, edited, deleted, pinned, unpinned, locked, unlocked, transferred, answered, or unanswered. |
+| dependabot_alert               | Triggered when a Dependabot alert is created, dismissed, or resolved.       |
+| watch                          | Triggered when someone stars a repository.                                  |
+| branch_protection_rule         | Triggered when a branch protection rule is created, edited, or deleted.     |
+| create                         | Triggered when a branch or tag is created.                                  |
+| fork                           | Triggered when a repository is forked.                                      |
+
+## Additional Information
+
+- **Event Modifiers**: Octohooks supports various event modifiers and filters, enabling you to fine-tune how events are handled and displayed in your Discord channel.
+- **Suggestions**: If there are specific events you would like to see supported, please make suggestions through our [support server](https://discord.gg/N4hnRmEJMX).
+- **Continuous Updates**: Our team is constantly working to add support for new events, so check back regularly for updates.
+
+By integrating these supported events with Octohooks, you can automate notifications and streamline your workflow, ensuring your team stays informed about important repository activities.

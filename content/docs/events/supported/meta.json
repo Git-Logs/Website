@@ -3,6 +3,8 @@
     "description": "All of the GitHub Events that are supported by Octyhooks.",
     "icon": "CheckCheck",
     "pages": [
-        "push"
+        "push",
+        "pull",
+        "star"
     ]
 }

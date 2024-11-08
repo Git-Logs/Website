@@ -49,7 +49,7 @@ export default function DocsPage(): React.ReactElement {
                         <Icon>
                             <WebhookIcon className="size-full" />
                         </Icon>
-                        <span className="ml-2">Octyhook Events</span>
+                        <span className="ml-2">Octohook Events</span>
                     </h2>
                     <p className="text-sm text-fd-muted-foreground">
                         Start hooking up your GitHub repositories and get notified about all the activities.

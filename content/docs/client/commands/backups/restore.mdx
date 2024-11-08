@@ -1,0 +1,44 @@
+---
+title: Restore Command
+description: The restore command allows you to restore a backup of repositories and event modifiers associated with a webhook in your Discord server. This command is useful for restoring a previously saved configuration.
+icon: Upload
+---
+
+### Command Usage
+> The `restore` command is available as both a slash command and a prefixed command using the prefix `git!`
+
+When you run the `/restore` command, the bot will restore the backup data from the provided JSON file to the specified webhook.
+
+### Parameters
+
+- **id**: The webhook ID to restore the backup to.
+- **file**: The backup file (must be a JSON file created using the `backup` command).
+
+### Example
+
+```plaintext
+/restore id:12345 file:backup.json
+```
+
+> In this example, the command restores the backup from `backup.json` to the webhook with ID `12345`.
+
+### Permissions
+This command **requires** the `MANAGE_GUILD` permission to execute. This is for security purposes to avoid letting unauthorized users restore backups in your guild.
+
+### Cooldown
+This command does not have a cooldown.
+
+## Responses
+When this command is triggered, the bot will respond with the following data:
+
+| Field             | Description                                                                 |
+|-------------------|-----------------------------------------------------------------------------|
+| **Status**        | Indicates the progress and completion of the restore process.               |
+
+## Notes
+- If the guild does not exist in the database, the command will notify the user that there are no webhooks in the guild.
+- If the webhook does not exist in the database, the command will notify the user that the webhook does not exist.
+- The backup file must be compatible with the current version of the bot. If the protocol version does not match, the command will notify the user.
+- Ensure that the backup file is valid and has not been tampered with to avoid issues during the restore process.
+- The restore process will update existing repositories and event modifiers or create new ones if they do not exist.
+- The bot will provide a summary of the restore process, including the number of repositories and event modifiers inserted or updated.

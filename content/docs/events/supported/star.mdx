@@ -1,0 +1,65 @@
+---
+title: Star Event
+description: The star event is triggered when a repository is starred or unstarred. This event is commonly used to notify external services about changes in the repository's star status.
+icon: Star
+---
+
+## Event Description
+
+When a `star` event occurs, GitHub sends a payload containing detailed information about the action. This includes whether the repository was starred or unstarred, the repository where the action occurred, and the user who performed the action.
+
+### Payload Example
+
+Here is an example of the payload sent by GitHub for a `star` event:
+
+```json
+{
+  "action": "created",
+  "repository": {
+    "id": 12345678,
+    "name": "example-repo",
+    "full_name": "octocat/example-repo",
+    "html_url": "https://github.com/octocat/example-repo",
+    "owner": {
+      "login": "octocat",
+      "id": 1,
+      "avatar_url": "https://github.com/images/error/octocat_happy.gif",
+      "html_url": "https://github.com/octocat"
+    }
+  },
+  "sender": {
+    "login": "octocat",
+    "id": 1,
+    "avatar_url": "https://github.com/images/error/octocat_happy.gif",
+    "html_url": "https://github.com/octocat"
+  }
+}
+```
+
+## How Octohooks Handles the Star Event
+
+Octohooks listens for `star` events and can be configured to perform various actions when this event is triggered. For example, you can set up Octohooks to post a message in a Discord channel whenever a repository is starred or unstarred.
+
+### Example Configuration
+
+To configure Octohooks to handle `star` events, follow these steps:
+
+1. **Create a Webhook**: Use the `/newhook` command to create a new webhook in your Discord server.
+2. **Set Up the Webhook in GitHub**: Add the webhook URL provided by Octohooks to your GitHub repository's webhook settings. Ensure that the `star` event is selected.
+3. **Configure Event Modifiers**: Use the `/create` command to create an event modifier for the `star` event. This allows you to customize how the event is handled and displayed in your Discord channel.
+
+### Example Command
+
+```plaintext
+/eventmod create webhook_id:12345 events:star blacklisted:false whitelisted:true priority:1 repo_id:67890 redirect_channel:#events
+```
+
+> In this example, the command creates an event modifier for the `star` event, ensuring that it is whitelisted and has a priority of 1. The event will be redirected to the `#events` channel in your Discord server.
+
+### Additional Information
+
+- **Event Modifiers**: Octohooks supports various event modifiers and filters, enabling you to fine-tune how star events are handled and displayed in your Discord channel.
+- **Troubleshooting**: If you encounter any issues while setting up or using the star event, please refer to our [support server](https://discord.gg/N4hnRmEJMX) for assistance.
+
+By integrating the star event with Octohooks, you can automate notifications and streamline your workflow, ensuring your team stays informed about important repository activities.
+
