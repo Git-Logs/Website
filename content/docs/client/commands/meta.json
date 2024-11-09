@@ -1,6 +1,7 @@
 {
     "title": "Commands",
     "description": "All of the bots available commands and their usage.",
+    "defaultOpen": true,
     "icon": "Terminal",
     "pages": [
         "index.mdx",

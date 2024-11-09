@@ -1,10 +1,10 @@
 {
-    "title": "Event Modifiers",
+    "title": "Backup Commands",
     "description": "Customize how events are handled by your webhooks, including creating and deleting event modifiers.",
     "defaultOpen": true,
-    "icon": "Terminal",
+    "icon": "Cloud",
     "pages": [
-        "create",
-        "delete"
+        "backup",
+        "restore"
     ]
 }
