@@ -15,7 +15,7 @@ rimrafSync(out, {
 });
 
 void OpenAPI.generateFiles({
-    input: ['./openapi.json'],
+    input: ['./openapi.yaml'],
     output: out,
     groupBy: 'tag'
 });

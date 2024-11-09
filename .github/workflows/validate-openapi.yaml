@@ -1,0 +1,32 @@
+name: Validate OpenAPI Specification
+
+on:
+  push:
+    branches:
+      - development
+    paths:
+      - openapi.yaml
+  pull_request:
+    branches:
+      - development
+    paths:
+      - openapi.yaml
+
+jobs:
+  validate-openapi:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+
+    - name: Install swagger-cli
+      run: npm install -g @apidevtools/swagger-cli
+    
+    - name: Validate openapi.yaml
+      run: swagger-cli validate openapi.yaml

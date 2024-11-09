@@ -21,8 +21,12 @@
     "strictNullChecks": true,
     "target": "ES2017",
     "paths": {
-      "@/*": ["./*"],
-      "@/utils/*": ["./utils/*"]
+      "@/*": [
+        "./*"
+      ],
+      "@/utils/*": [
+        "utils/*"
+      ]
     },
     "lib": [
       "dom",
