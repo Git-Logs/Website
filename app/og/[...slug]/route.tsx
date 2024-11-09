@@ -3,8 +3,8 @@ import { type ImageResponse } from 'next/og';
 import { metadataImage } from '@/utils/metadata-image';
 import { generateOGImage } from '@/app/og/[...slug]/og';
 
-const font = readFileSync('@/app/og/[...slug]/Geist-Regular.ttf');
-const fontBold = readFileSync('@/app/og/[...slug]/Geist-Bold.ttf');
+const font = readFileSync('./app/og/[...slug]/Geist-Regular.ttf');
+const fontBold = readFileSync('./app/og/[...slug]/Geist-Bold.ttf');
 
 export const GET = metadataImage.createAPI((page: any): ImageResponse => {
   return generateOGImage({
