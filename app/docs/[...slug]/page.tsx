@@ -44,7 +44,7 @@ export default async function Page(props: {
 
   if (!page) notFound();
 
-  const path = `apps/docs/content/docs/${page.file.path}`;
+  const path = `content/docs/${page.file.path}`;
   const preview = page.data.preview;
   const { body: Mdx, toc, lastModified } = await page.data.load();
 
@@ -101,7 +101,7 @@ export async function generateMetadata(props: {
   if (!page) notFound();
 
   const description =
-    page.data.description ?? 'The library for building documentation sites';
+    page.data.description ?? 'The perfect tool to keep you connected to your GitHub activity and stay up-to-date with every commit.';
 
   return createMetadata(
     metadataImage.withImage(page.slugs, {
