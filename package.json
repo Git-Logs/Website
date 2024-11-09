@@ -5,8 +5,8 @@
   "scripts": {
     "build": "next build",
     "check": "depcheck",
-    "dev": "next dev --turbo",
-    "docs:gen": "bun ./scripts/openapi-gen.mjs",
+    "dev": "bun ./scripts/openapi-gen.mjs && next dev --turbo",
+    "docs": "bun ./scripts/openapi-gen.mjs",
     "start": "next start"
   },
   "dependencies": {
