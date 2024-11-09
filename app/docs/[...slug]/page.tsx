@@ -1,19 +1,4 @@
 import type { Metadata } from 'next';
-import {
-  DocsPage,
-  DocsBody,
-  DocsTitle,
-  DocsDescription,
-  DocsCategory,
-} from 'fumadocs-ui/page';
-import { notFound } from 'next/navigation';
-import {
-  type ComponentProps,
-  type FC,
-  Fragment,
-  type ReactElement,
-  type ReactNode,
-} from 'react';
 import defaultComponents from 'fumadocs-ui/mdx';
 import { Popup, PopupContent, PopupTrigger } from 'fumadocs-twoslash/ui';
 import { Tab, Tabs } from 'fumadocs-ui/components/tabs';
@@ -22,10 +7,26 @@ import { TypeTable } from 'fumadocs-ui/components/type-table';
 import { Accordion, Accordions } from 'fumadocs-ui/components/accordion';
 import * as Preview from '@/components/preview';
 import { createMetadata } from '@/utils/metadata';
-import { source } from '@/app/source';
 import { Wrapper } from '@/components/preview/wrapper';
 import { AutoTypeTable } from '@/components/type-table';
 import { metadataImage } from '@/utils/metadata-image';
+import { source, openapi } from '@/app/source';
+import { notFound } from 'next/navigation';
+
+import {
+  DocsPage,
+  DocsBody,
+  DocsTitle,
+  DocsDescription,
+  DocsCategory,
+} from 'fumadocs-ui/page';
+import {
+  type ComponentProps,
+  type FC,
+  Fragment,
+  type ReactElement,
+  type ReactNode,
+} from 'react';
 
 function PreviewRenderer({ preview }: { preview: string }): ReactNode {
   if (preview && preview in Preview) {
@@ -82,6 +83,7 @@ export default async function Page(props: {
             Accordions,
             Wrapper,
             blockquote: Callout as unknown as FC<ComponentProps<'blockquote'>>,
+            APIPage: openapi.APIPage,
             clientOnly: params.slug[0] === 'client' ? Fragment : () => undefined,
             eventsOnly: params.slug[0] === 'events' ? Fragment : () => undefined,
           }}

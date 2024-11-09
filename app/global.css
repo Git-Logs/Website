@@ -10,7 +10,7 @@
   --primary: var(--ui-color);
 }
 
-.modifiers {
+.references {
   --primary: var(--mdx-color);
 }
 

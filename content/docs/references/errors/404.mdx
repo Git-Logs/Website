@@ -1,0 +1,28 @@
+---
+title: 404 Not Found
+description: The requested resource was not found.
+icon: Info
+---
+
+## Possible Causes
+
+- The resource does not exist.
+- The resource ID is incorrect.
+- The endpoint URL is incorrect.
+
+## Example Response
+
+```json
+{
+  "error": {
+    "code": "NOT_FOUND",
+    "message": "The requested resource was not found.",
+    "requestId": "req_1234"
+  }
+}
+```
+
+## Troubleshooting
+- Verify the resource ID and ensure it exists.
+- Check the endpoint URL for typos.
+- Ensure the resource has not been deleted.

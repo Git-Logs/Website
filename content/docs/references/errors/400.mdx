@@ -1,0 +1,28 @@
+---
+title: 400 Bad Request
+description: The request is malformed or missing required parameters.
+icon: Info
+---
+
+## Possible Causes
+
+- Missing required query parameters.
+- Invalid JSON payload.
+- Incorrect data types.
+
+## Example Response
+
+```json
+{
+  "error": {
+    "code": "BAD_REQUEST",
+    "message": "The request is missing required parameters.",
+    "requestId": "req_1234"
+  }
+}
+```
+
+## Troubleshooting
+- Ensure all required parameters are included in the request.
+- Validate the JSON payload against the schema.
+- Check the data types of the parameters.

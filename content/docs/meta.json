@@ -1,6 +1,7 @@
 {
   "pages": [
     "client",
-    "events"
+    "events",
+    "references"
   ]
 }

@@ -1,0 +1,26 @@
+---
+title: 401 Unauthorized
+description: Details about the 401 Unauthorized error.
+icon: Info
+---
+
+## Possible Causes
+
+- Missing or invalid authentication token.
+- Expired authentication token.
+
+## Example Response
+
+```json
+{
+  "error": {
+    "code": "UNAUTHORIZED",
+    "message": "The request is not authenticated.",
+    "requestId": "req_1234"
+  }
+}
+```
+
+## Troubleshooting
+- Ensure the authentication token is included in the request headers.
+- Verify the validity and expiration of the authentication token.

@@ -1,0 +1,28 @@
+---
+title: 500 Internal Server Error
+description: An internal server error occurred.
+icon: Info
+---
+
+## Possible Causes
+
+- Unexpected server error.
+- Unhandled exception in the server code.
+- Database connection issues.
+
+## Example Response
+
+```json
+{
+  "error": {
+    "code": "INTERNAL_SERVER_ERROR",
+    "message": "An internal server error occurred.",
+    "requestId": "req_1234"
+  }
+}
+```
+
+## Troubleshooting
+- Check the server logs for more details.
+- Ensure the database is accessible and operational.
+- Review the server code for unhandled exceptions.

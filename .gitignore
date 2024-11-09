@@ -7,6 +7,15 @@ package-lock.json
 # Best to keep this up to date with the content/docs folder
 content/docs/openapi/**/*.mdx
 !content/docs/openapi/index.mdx
+content/docs/references/**/*.mdx
+!content/docs/references/index.mdx
+!content/docs/references/meta.json
+!content/docs/references/errors/**/*.mdx
+!content/docs/references/errors/meta.json
+!content/docs/references/errors/400.mdx
+!content/docs/references/errors/401.mdx
+!content/docs/references/errors/404.mdx
+!content/docs/references/errors/500.mdx
 
 # Next.js stuff
 !next-env.d.ts
