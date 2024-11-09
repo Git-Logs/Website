@@ -3,8 +3,7 @@
   "version": "2.0.0",
   "private": true,
   "scripts": {
-    "build:dev": "bun ./scripts/openapi-gen.mjs && next build",
-    "build:prod": "node ./scripts/openapi-gen.mjs && next build",
+    "build": "bun ./scripts/openapi-gen.mjs && next build",
     "check:dev": "depcheck",
     "dev": "next dev --turbo",
     "docs": "bun ./scripts/openapi-gen.mjs",
